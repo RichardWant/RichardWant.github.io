@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.main {
+  float:left;
+  color: black;
+  width:70%;
+  height: 600px;
+  padding:0 20px;
+}
+.right {
+  background-color:rgb(120, 120, 120);
+  float:left;
+  width:30%;
+  padding:15px;
+  height: 600px;
+  margin-top:7px;
+  text-align:center;
+}
+
+@media only screen and (max-width:800px) {
+  /* For mobile phones: */
+ .main, .right {
+    width:100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+  <div style="background-color:rgb(0, 255, 255);padding:45px;text-align:center;">
+  <h1>Richard website</h1>
+</div>
+
+  <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="ph.html">photo</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">introduction</a>
+    <div class="dropdown-content">
+      <a href="family.html">family</a>
+      <a href="club.html">club</a>
+      <a href="motto.html">motto</a>
+    </div>
+  </li>
+</ul>
+
+  <div class="main">
+    <h2>club</h2>
+    <p>在大學的兩年中，我參加了火舞社，也當上了器材長，透過社團的學習， 讓我學到了課堂所學不到的東西，溝通和領導的能力，每一次的活動都需要幹 部們定期的開會、協調等等來完成，也讓我知道了團隊合作的重要性，我也曾 擔任過成發的器材長，在成發當天，所有的器材調度我都需要非常清楚，還有 人力的安排，每個調度都是不可或缺的，雖然過程中很累，但我也在這次的成 發中學到的許多的東西，讓我像是火一般熱情，面對種種困難也不畏懼。</p>
+  </div>
+
+  <div class="right">
+    <h2>About Richard</h2>
+           <img src="photo/aries.jpg" alt="Cinque Terre" width="300" height="200">    
+    <p>Brithday 03/26</p>
+  </div>
+</div>
+
+<div style="background-color:#e5e5e5;text-align:center;padding:20px;margin-top:10px;">
+<hr>
+© copyright</div>
+
+</body>
+</html>
