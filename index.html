@@ -80,7 +80,7 @@ li.dropdown {
 }
 </style>
 </head>
-<body style="font-family:Verdana;color:#aaaaaa;">
+<body style="font-family:Verdana;color:#aaaaaa;" onload="init();">
 
   <div style="background-color:rgb(0, 255, 255);padding:45px;text-align:center;">
   <h1>Richard website</h1>
@@ -102,12 +102,50 @@ li.dropdown {
   <div class="main">
     <h2>welcome to Richard website</h2>
     <p>This is a first website about me.</p>
+    <br>
+    <p>This is a canvas</p>
+    <canvas id="myCanvas" width="500" height="300" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<script language="JavaScript">
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "red";
+ctx.fillRect(0, 0, 500, 300);
+var x=0,y=125;
+var width=50;
+
+function rect(){
+ctx.fillRect(0, 0, 500, 300);
+move();
+ctx.clearRect(x,y,width,width);
+if(x+width>500)
+ctx.clearRect(0,y,width-500+x,width);
+}
+
+function move(){
+  if(x>500)
+    x=0;
+  else 
+    x++;
+}
+
+function init(){
+  setInterval(rect,10);
+}
+
+</script>
+
   </div>
 
   <div class="right">
     <h2>About Richard</h2>
            <img src="photo/aries.jpg" alt="Cinque Terre" width="300" height="200">    
     <p>Brithday 03/26</p>
+    <img id="myImage" src="photo/middle.jpg" style="width:300px">
+<br>
+<button onclick="document.getElementById('myImage').src='photo/left.jpg'">Turn left</button>
+<button onclick="document.getElementById('myImage').src='photo/middle.jpg'">middle</button>
+<button onclick="document.getElementById('myImage').src='photo/right.jpg'">Turn right</button>
   </div>
 </div>
 
